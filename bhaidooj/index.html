@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday & Bhai Dooj - Sibling Joy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="logo">🎈🪔</div>
+                <div>
+                    <h1>Happy Birthday & Bhai Dooj</h1>
+                    <div class="subtitle">For Jigisha</div>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <button class="nav-btn active" data-page="home">Home</button>
+                <button class="nav-btn" data-page="gallery">Gallery</button>
+                <button class="nav-btn" data-page="songs">Songs</button>
+                <button class="nav-btn" data-page="letter">Letter</button>
+            </nav>
+        </header>
+
+        <main class="container">
+            <!-- Home Page -->
+            <section id="home" class="page active">
+                <div class="home-card">
+                    <div class="text-center mb-8">
+                        <div class="flex justify-center mb-4">
+                            <div class="sparkles animate-float">✨</div>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 gradient-celebration">
+                            Happy Birthday & Bhai Dooj!
+                        </h1>
+                        <p class="text-xl md:text-2xl text-muted-foreground mb-6">
+                            To the most amazing sister in the world 💖
+                        </p>
+                    </div>
+
+                    <div class="mb-8 text-center">
+                        <div class="intro-card">
+                            <p class="text-lg leading-relaxed">
+                                I created this special website just for you, to celebrate not just your birthday, 
+                                but also the beautiful bond we share. Every photo, every song, and every word here 
+                                is a testament to how much you mean to me. Let's celebrate YOU! 🎉
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div class="nav-card" onclick="showPage('gallery')">
+                            <div class="nav-icon">📸</div>
+                            <h3 class="text-xl font-semibold mb-2">Gallery</h3>
+                            <p class="text-muted-foreground">Our cherished memories together</p>
+                        </div>
+
+                        <div class="nav-card" onclick="showPage('songs')">
+                            <div class="nav-icon">🎵</div>
+                            <h3 class="text-xl font-semibold mb-2">Songs</h3>
+                            <p class="text-muted-foreground">Music that reminds me of you</p>
+                        </div>
+
+                        <div class="nav-card" onclick="showPage('letter')">
+                            <div class="nav-icon">💌</div>
+                            <h3 class="text-xl font-semibold mb-2">Letter</h3>
+                            <p class="text-muted-foreground">A heartfelt message for you</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <button class="confetti-btn" onclick="triggerConfetti()">
+                            <span class="sparkles">✨</span>
+                            Celebrate! 🎉
+                        </button>
+                        <button class="music-btn" onclick="toggleMusic()">
+                            <span id="music-icon">🎵</span>
+                            <span id="music-text">Play Music</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Page -->
+            <section id="gallery" class="page">
+                <div class="page-header">
+                    <button class="back-btn" onclick="showPage('home')">
+                        ← Back to Home
+                    </button>
+                    <h1 class="text-4xl md:text-5xl font-bold gradient-celebration mb-4">
+                        Our Beautiful Memories 📸
+                    </h1>
+                    
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="photo-card" onclick="openImageModal('public/images/WhatsApp Image 2025-10-23 at 11.08.03_1700a5ce.jpg', 'Beautiful Memory 1 📸', 'A precious moment captured in time')">
+                        <div class="photo-container">
+                            <img src="public/images/WhatsApp Image 2025-10-23 at 11.08.03_1700a5ce.jpg" alt="Beautiful Memory 1">
+                        </div>
+                        <div class="photo-caption">
+                            <h3 class="font-semibold text-lg">Beautiful Memory 1 📸</h3>
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openImageModal('public/images/WhatsApp Image 2025-10-23 at 11.08.03_bc20132f.jpg', 'Beautiful Memory 2 📸', 'Another wonderful moment together')">
+                        <div class="photo-container">
+                            <img src="public/images/WhatsApp Image 2025-10-23 at 11.08.03_bc20132f.jpg" alt="Beautiful Memory 2">
+                        </div>
+                        <div class="photo-caption">
+                            <h3 class="font-semibold text-lg">Beautiful Memory 2 📸</h3>
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openImageModal('public/images/WhatsApp Image 2025-10-23 at 11.08.03_d889b480.jpg', 'Beautiful Memory 3 📸', 'Cherished memories we\'ll treasure forever')">
+                        <div class="photo-container">
+                            <img src="public/images/WhatsApp Image 2025-10-23 at 11.08.03_d889b480.jpg" alt="Beautiful Memory 3">
+                        </div>
+                        <div class="photo-caption">
+                            <h3 class="font-semibold text-lg">Beautiful Memory 3 📸</h3>
+                        </div>
+                    </div>
+
+                    <div class="photo-card" onclick="openImageModal('public/images/WhatsApp Image 2025-10-23 at 11.14.21_fe6cd11a.jpg', 'Beautiful Memory 4 📸', 'Special moments that make us smile')">
+                        <div class="photo-container">
+                            <img src="public/images/WhatsApp Image 2025-10-23 at 11.14.21_fe6cd11a.jpg" alt="Beautiful Memory 4">
+                        </div>
+                        <div class="photo-caption">
+                            <h3 class="font-semibold text-lg">Beautiful Memory 4 📸</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Songs Page -->
+            <section id="songs" class="page">
+                <div class="page-header">
+                    <button class="back-btn" onclick="showPage('home')">
+                        ← Back to Home
+                    </button>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="music-icon animate-float">🎵</div>
+                        <h1 class="text-4xl md:text-5xl font-bold gradient-celebration">
+                            Songs for You 🎵
+                        </h1>
+                    </div>
+                    <p class="text-lg text-muted-foreground">
+                        A curated playlist of songs that celebrate you and our bond
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <div class="song-card">
+                        <div class="song-header">
+                            <h2 class="text-2xl font-bold mb-2">Your Favorite Song</h2>
+                            <p class="text-muted-foreground mb-4">The song you love the most</p>
+                        </div>
+                        
+                        <div class="video-container">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/AMuRRXCuy-4"
+                                title="Your Favorite Song"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        
+
+                        
+                        
+
+                    <div class="song-card">
+                        <div class="song-header">
+                            <h2 class="text-2xl font-bold mb-2">My Dedication to You</h2>
+                            <p class="text-muted-foreground mb-4">A special song just for you</p>
+                        </div>
+                        
+                        <div class="video-container">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/Xg0smoVruAM"
+                                title="My Dedication to You"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <div class="bottom-message">
+                        <p class="text-lg">
+                            Hope these songs bring a smile to your face, just like you bring joy to my life! 🎶✨
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Letter Page -->
+            <section id="letter" class="page">
+                <div class="page-header">
+                    <button class="back-btn" onclick="showPage('home')">
+                        ← Back to Home
+                    </button>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="heart-icon animate-float">💖</div>
+                        <h1 class="text-4xl md:text-5xl font-bold gradient-celebration">
+                            A Letter to You 💌
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="letter-card">
+                    <div class="letter-content">
+                        <p class="date-text" id="current-date"></p>
+
+                        <p class="greeting">Dear Sister,</p>
+
+                        <p>
+                            On this special day that marks both your birthday and Bhai Dooj, I want to take a moment 
+                            to tell you how incredibly blessed I feel to have you as my sister. You're not just family; 
+                            you're my friend, my confidant, and one of the most important people in my life.
+                        </p>
+
+                        <p>
+                            From our childhood adventures to the memories we're making now, every moment with you has 
+                            been precious. You've been there through my ups and downs, always ready with a listening 
+                            ear, wise advice, or just a warm hug when I needed it most.
+                        </p>
+
+                        <p>
+                            Your strength, kindness, and beautiful spirit inspire me every day. The way you light up 
+                            a room with your smile, the way you care for everyone around you, and the way you pursue 
+                            your dreams with such determination – all of it makes me so proud to call you my sister.
+                        </p>
+
+                        <p>
+                            As you celebrate another year of your wonderful life, I want you to know that I'll always 
+                            be here for you, just as you've always been there for me. Distance may separate us at times, 
+                            but the bond we share is unbreakable.
+                        </p>
+
+                        <p>
+                            May this year bring you endless joy, success in all your endeavors, and all the happiness 
+                            you deserve. May your dreams come true, and may you always find reasons to smile.
+                        </p>
+
+                        <p class="celebration-text">
+                            Happy Birthday & Happy Bhai Dooj! 🎂🎉
+                        </p>
+
+                        <p>
+                            Thank you for being the amazing person you are. Thank you for all the love, laughter, and 
+                            memories. Here's to many more years of our beautiful bond!
+                        </p>
+
+                        <div class="signature">
+                            <p class="font-semibold">With all my love,</p>
+                            <p class="signature-name">Your Brother 💖</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="mt-8 text-center">
+                    <div class="decorations">
+                        💝 🎂 🎉 ✨ 🌸
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">Made with ❤️ for Jigisha — Happy Birthday & Bhai Dooj</footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal" onclick="closeImageModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeImageModal()">×</button>
+            <div class="modal-image-container">
+                <img id="modal-image" src="" alt="">
+            </div>
+            <div class="modal-caption">
+                <h3 id="modal-caption" class="text-2xl font-bold mb-2"></h3>
+                <p id="modal-description" class="text-lg text-muted-foreground"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+  </body>
+</html>
